@@ -50,4 +50,17 @@ public class Operacion {
         }
         return vectorSimbolos;
     } 
+    
+    public int ejecutar(int numeros[], String simbolos[]){
+        int resultado = Integer.parseInt(String.valueOf(numeros[0]));
+        for (int i = 0; i < simbolos.length; i++) {
+            if (String.valueOf(simbolos[i]).equals("+")) {
+                resultado = resultado + Integer.parseInt(String.valueOf(numeros[i+1]));
+            }else{
+                resultado = resultado - Integer.parseInt(String.valueOf(numeros[i+1]));
+            }            
+        }
+        return resultado;
+    }
+    
 }

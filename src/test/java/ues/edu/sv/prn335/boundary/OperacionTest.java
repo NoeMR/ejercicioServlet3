@@ -37,4 +37,14 @@ public class OperacionTest {
         //fail("esto es un fail");
     }
 
+    @Test
+    public void testEjecutar(){
+        Operacion instancia = new Operacion();
+        int numeros[] = {4, 2, 1};
+        String simbolos[] = {"+", "-"};
+        int esperado = 5;
+        int resultado = instancia.ejecutar(numeros, simbolos);
+        assertEquals(esperado, resultado);
+        //fail("buuuuuu");
+    }
 }
